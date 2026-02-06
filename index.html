@@ -2,17 +2,262 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>GAUZERE – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Julien Gauzere – Étudiant développeur web et créatif.">
+  <meta name="author" content="Julien Gauzere">
+  <meta property="og:title" content="Julien Gauzere – Portfolio">
+  <meta property="og:description" content="Découvrez les projets et compétences de Julien Gauzere, étudiant en informatique.">
+  <meta property="og:type" content="website">
+  <title>Julien Gauzere – Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Julien GAUZERE</h1>
-  <p>Étudiant / Dev / Créatif</p>
 
-  <h2>Projets</h2>
-  <ul>
-    <li>Projet 1</li>
-    <li>Projet 2</li>
-  </ul>
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a href="#hero" class="nav__logo">JG<span class="accent">.</span></a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav__list" id="nav-list" role="list">
+        <li><a href="#hero" class="nav__link active">Accueil</a></li>
+        <li><a href="#about" class="nav__link">À propos</a></li>
+        <li><a href="#skills" class="nav__link">Compétences</a></li>
+        <li><a href="#projects" class="nav__link">Projets</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="hero">
+      <div class="container hero__content">
+        <p class="hero__greeting reveal">Bonjour, je suis</p>
+        <h1 class="hero__title reveal">Julien <span class="accent">Gauzere</span></h1>
+        <p class="hero__subtitle reveal">Étudiant · Développeur · Créatif</p>
+        <p class="hero__description reveal">
+          Passionné par le développement web et les nouvelles technologies,
+          je conçois des expériences numériques modernes et accessibles.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title reveal">À propos</h2>
+        <div class="about__grid">
+          <div class="about__image reveal">
+            <div class="about__image-placeholder" aria-hidden="true">JG</div>
+          </div>
+          <div class="about__text reveal">
+            <p>
+              Je suis étudiant en BUT Informatique, curieux et motivé.
+              J'aime résoudre des problèmes complexes et transformer des idées
+              en projets concrets.
+            </p>
+            <p>
+              En dehors du code, je m'intéresse au design, à la musique et
+              aux nouvelles technologies. Je suis toujours à la recherche
+              de nouveaux défis et d'opportunités d'apprentissage.
+            </p>
+            <ul class="about__info" role="list">
+              <li>
+                <strong>Formation</strong>
+                <span>BUT Informatique</span>
+              </li>
+              <li>
+                <strong>Localisation</strong>
+                <span>France</span>
+              </li>
+              <li>
+                <strong>Disponibilité</strong>
+                <span>Stage / Alternance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal">Compétences</h2>
+        <div class="skills__grid">
+
+          <article class="skill-card reveal" aria-label="Développement Front-end">
+            <div class="skill-card__icon">&#60;/&#62;</div>
+            <h3 class="skill-card__title">Front-end</h3>
+            <ul class="skill-card__list" role="list">
+              <li>HTML5 &amp; CSS3</li>
+              <li>JavaScript</li>
+              <li>React / Vue.js</li>
+              <li>Responsive Design</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" aria-label="Développement Back-end">
+            <div class="skill-card__icon">&#123;&#125;</div>
+            <h3 class="skill-card__title">Back-end</h3>
+            <ul class="skill-card__list" role="list">
+              <li>PHP / Symfony</li>
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>SQL / PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal" aria-label="Outils et méthodes">
+            <div class="skill-card__icon">&#9881;</div>
+            <h3 class="skill-card__title">Outils</h3>
+            <ul class="skill-card__list" role="list">
+              <li>Git / GitHub</li>
+              <li>Docker</li>
+              <li>Figma</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal">Projets</h2>
+        <div class="projects__grid">
+
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <span class="project-card__placeholder">Projet 1</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Application Web</h3>
+              <p class="project-card__description">
+                Une application web full-stack développée avec React et Node.js,
+                permettant de gérer des données en temps réel.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="btn btn--small" aria-label="Voir le projet Application Web">Voir le projet</a>
+                <a href="#" class="btn btn--small btn--outline" aria-label="Code source Application Web">Code source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <span class="project-card__placeholder">Projet 2</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Site Vitrine</h3>
+              <p class="project-card__description">
+                Un site vitrine responsive et accessible pour une association locale,
+                développé en HTML, CSS et JavaScript.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="btn btn--small" aria-label="Voir le projet Site Vitrine">Voir le projet</a>
+                <a href="#" class="btn btn--small btn--outline" aria-label="Code source Site Vitrine">Code source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__image">
+              <span class="project-card__placeholder">Projet 3</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">API REST</h3>
+              <p class="project-card__description">
+                Une API RESTful sécurisée avec authentification JWT,
+                développée avec Python et Flask.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="btn btn--small" aria-label="Voir le projet API REST">Voir le projet</a>
+                <a href="#" class="btn btn--small btn--outline" aria-label="Code source API REST">Code source</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title reveal">Contact</h2>
+        <p class="contact__intro reveal">
+          Vous avez un projet, une question ou simplement envie d'échanger&nbsp;?
+          N'hésitez pas à me contacter&nbsp;!
+        </p>
+        <form class="contact__form reveal" id="contact-form" novalidate>
+          <div class="form__group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom" autocomplete="name">
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <div class="form__group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com" autocomplete="email">
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <div class="form__group form__group--full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message…"></textarea>
+            <span class="form__error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit">Envoyer</button>
+          <p class="form__status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>&copy; 2026 Julien Gauzere. Tous droits réservés.</p>
+      <ul class="footer__socials" role="list">
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="mailto:contact@example.com" aria-label="Envoyer un e-mail">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ===== BOUTON RETOUR EN HAUT ===== -->
+  <button class="scroll-top" id="scroll-top" aria-label="Retour en haut de page" hidden>&#8593;</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
